@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tebak Hobby</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #153448;
+        }
+
+        header {
+            background-color: #948979;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px 0;
+            background-color: #DFD0B8;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #DFD0B8;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center; 
+        }
+
+        h1, h2 {
+            margin: 0;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; 
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.1); 
+        }
+
+        button img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        button p {
+            margin: 0;
+            font-size: 18px;
+            color: #3C5B6F;
+        }
+
+        #notification {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #3C5B6F;
+            color: white;
+            border-radius: 10px;
+            z-index: 999;
+            display: none; 
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #948979;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #3C5B6F;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AYO TEBAK HOBBY KU</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h2>CAP CIP CUP</h2>
+            <div class="options">
+                <div class="option">
+                    <button onclick="checkAnswer('mancing')">
+                        <img src="https://i.pinimg.com/236x/ba/10/a4/ba10a459248d9d775dea02da4a181735.jpg" alt="Mancing">
+                        <p>Mancing</p>
+                    </button>
+                </div>
+                <div class="option">
+                    <button onclick="checkAnswer('terbang')">
+                        <img src="https://i.pinimg.com/236x/03/8e/ff/038eff7406575a2e6dda2c9b89dc2120.jpg" alt="Terbang">
+                        <p>Terbang</p>
+                    </button>
+                </div>
+                <div class="option">
+                    <button onclick="checkAnswer('musik')">
+                        <img src="https://i.pinimg.com/236x/e8/f1/b2/e8f1b27ece833900699ab168477b1c34.jpg" alt="Mendengarkan Musik">
+                        <p>Mendengarkan Musik</p>
+                    </button>
+                </div>
+            </div>
+            <a href="#" class="back-btn" onclick="history.back()">Back</a>
+        </div>
+    </main>
+    <footer>
+        <p>PRAKTIKUM 10 PDW</p>
+    </footer>
+    <div id="notification"></div>
+    <script src="script.js"></script>
+</body>
+</html>
